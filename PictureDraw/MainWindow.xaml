@@ -5,8 +5,16 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PictureDraw"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="800" WindowState="Maximized">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal">
+            <TextBox Width="500" x:Name="tb_url" FontSize="25"/>
+            <Button Click="Button_Click" FontSize="25">加载</Button>
+        </StackPanel>
+        <local:DrawContainer x:Name="dc" Grid.Row="1"/>
     </Grid>
 </Window>

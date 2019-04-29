@@ -23,5 +23,10 @@ namespace PictureDraw
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            dc.ImagesPosition = tb_url.Text;
+        }
     }
 }
